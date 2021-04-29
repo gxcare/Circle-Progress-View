@@ -20,15 +20,15 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_6
-        targetCompatibility JavaVersion.VERSION_1_6
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
     }
     productFlavors {
     }
 }
 
 dependencies {
-    api 'androidx.annotation:annotation:1.0.0'
+    api 'androidx.annotation:annotation:1.2.0'
 }
 
 // build a jar with source files
