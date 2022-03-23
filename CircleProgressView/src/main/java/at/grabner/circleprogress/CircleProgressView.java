@@ -20,14 +20,15 @@ import android.graphics.SweepGradient;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Message;
-import androidx.annotation.ColorInt;
-import androidx.annotation.FloatRange;
-import androidx.annotation.IntRange;
-import androidx.annotation.NonNull;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.FloatRange;
+import androidx.annotation.IntRange;
+import androidx.annotation.NonNull;
 
 import java.text.DecimalFormat;
 
@@ -205,9 +206,7 @@ public class CircleProgressView extends View {
                 R.styleable.CircleProgressView));
 
         if (!isInEditMode()) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-                setLayerType(View.LAYER_TYPE_HARDWARE, null);
-            }
+            setLayerType(View.LAYER_TYPE_HARDWARE, null);
         }
 
         mMaskPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
