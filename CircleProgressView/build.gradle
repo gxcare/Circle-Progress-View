@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 group = 'com.github.jakob-grabner'
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdk rootProject.ext.compileSdkVersion
     namespace 'at.grabner.circleprogress'
     defaultConfig {
         minSdkVersion 16
@@ -28,7 +28,7 @@ android {
 }
 
 dependencies {
-    api 'androidx.annotation:annotation:1.4.0'
+    api 'androidx.annotation:annotation:1.6.0'
 }
 
 //// build a jar with source files
