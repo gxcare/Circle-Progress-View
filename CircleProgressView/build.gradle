@@ -2,33 +2,33 @@ apply plugin: 'com.android.library'
 
 group = 'com.github.jakob-grabner'
 android {
-    compileSdk rootProject.ext.compileSdkVersion
     namespace 'at.grabner.circleprogress'
+
+    compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 3
-        versionName "1.2"
+
+        // required for desugaring when setting minSdkVersion to 20 or lower
+        multiDexEnabled true
+    }
+    compileOptions {
+        // Flag to enable support for the new language APIs
+        coreLibraryDesugaringEnabled true
     }
     buildTypes {
         release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-        debug {
-            minifyEnabled false
+            consumerProguardFiles 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    productFlavors {
-    }
+
 }
 
 dependencies {
-    api 'androidx.annotation:annotation:1.6.0'
+    // Java 8 desugaring
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs_nio:2.0.4'
+
+    api 'androidx.annotation:annotation:1.7.1'
 }
 
 //// build a jar with source files
