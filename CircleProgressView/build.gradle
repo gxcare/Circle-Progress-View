@@ -23,7 +23,7 @@ android {
 
 dependencies {
     // Java 8 desugaring
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs_nio:2.0.4'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs_nio:2.1.1'
 
     api 'androidx.annotation:annotation:1.7.1'
 }
