@@ -23,9 +23,9 @@ android {
 
 dependencies {
     // Java 8 desugaring
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs_nio:2.1.1'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs_nio:2.1.2'
 
-    api 'androidx.annotation:annotation:1.7.1'
+    api 'androidx.annotation:annotation:1.8.2'
 }
 
 //// build a jar with source files
