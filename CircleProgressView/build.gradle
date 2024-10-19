@@ -10,8 +10,6 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
     }
     compileOptions {
-        // Flag to enable support for the new language APIs
-        coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
@@ -24,9 +22,6 @@ android {
 }
 
 dependencies {
-    // Java 8 desugaring
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs_nio:2.1.2'
-
     api 'androidx.annotation:annotation:1.8.2'
 }
 
